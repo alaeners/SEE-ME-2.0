@@ -1,0 +1,55 @@
+<html lang="pt-br">
+<div class="page-header" filter-color="orange">
+    <div class="page-header-image" style="background-image:url(assets/img/Radial-2.jpg)"></div>
+    <div class="container">
+        <div class="col-md-4 content-center">
+            <div class="card card-login card-plain">
+                <div class="content-center brand">
+                    <img class="n-logo" src="assets/img/now-logo.png" alt="">
+                    <div class="card" *ngFor="let local of locais | async | paginate: config">
+                        <div class="content-center brand">
+                            <div class="col-md-12 mr-auto">
+                                <ul class="nav nav-tabs justify-content-center" role="tablist">
+                                    <li class="nav-item" role="tab">
+                                        <span role="tab" style="color: black">{{local.nome}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content text-center">
+                                    <div class="tab-pane active" id="home" role="tabpanel">
+                                        <p style="color: black">Endereco: {{local.endereco.logradouro}},
+                                            {{local.endereco.numero}},
+                                            {{local.endereco.bairro}},
+                                            {{local.endereco.localidade}}</p>
+                                        <p style="color: black">Telefone: {{local.contato.telefone}}</p>
+                                        <p style="color: black">E-mail: {{local.contato.email}}</p>
+                                        <p style="color: black">Site: {{local.contato.website}}</p>
+                                        <p style="color: black">Nota: {{local.nota}} <span *ngIf="!local.nota">Sem avaliação</span></p>
+                                        <div class="content-center">
+                                            <div *ngIf="calculateEvaluation(local)">
+                                                <span class="fa fa-star mr-2 star" *ngFor="let star of rate"
+                                                    [ngClass]="{'star-checked': star.checked}"></span>
+                                            </div>
+                                            <button class="btn btn-success btn-round" type="button"
+                                                (click)="editLocal(local)" *ngIf="show">Editar</button>
+                                                <button class="btn btn-warning btn-round" type="button"
+                                                (click)="avaliar(local)">Favoritar</button>                                                
+                                            <button class="btn btn-warning btn-round" type="button"
+                                                (click)="favoritar(local)">Avaliar</button>
+                                            <button class="btn btn-primary btn-round" type="button"
+                                                (click)="deleteLocal(local)" *ngIf="show">Deletar</button>
+                                            <pagination-controls role="list" (pageChange)="pageChange($event)"
+                                                class="my-pagination"></pagination-controls>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" color-on-scroll="500">
+  <div class="container">
+    <div class="dropdown button-dropdown">
+    </div>
+    <div class="navbar-translate">
+      <a class="navbar-brand" [routerLink]="['/index']" placement="bottom">See Me</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+         aria-expanded="false" aria-label="Toggle navigation"
+        (click)="sidebarToggle()">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="orange">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="index">
+            <i class="now-ui-icons objects_umbrella-13"></i>
+            <p>Home</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="show == false" routerLink="shared/login">
+            <i class="now-ui-icons users_circle-08"></i>
+            <p>Login</p>
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="show">
+          <a class="nav-link" (click)="Usuario()">
+            <i class="now-ui-icons media-1_album"></i>
+            <p>Controle de Usuários</p>
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="show">
+          <a class="nav-link" routerLink="no-shared/dashboard">
+            <i class="now-ui-icons design_bullet-list-67"></i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="show">
+          <a class="nav-link" (click)="LogOut(content)">
+            <i class="now-ui-icons media-1_button-power"></i>
+            <p>Logout</p>
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="shared/about">
+              <i class="now-ui-icons business_bulb-63"></i>
+              <p>Sobre</p>
+            </a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>

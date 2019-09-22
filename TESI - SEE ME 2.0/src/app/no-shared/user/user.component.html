@@ -1,0 +1,51 @@
+<html lang="pt-br">
+<script>
+    function reloadThePage() {
+        window.location.reload(true);
+    } 
+</script>
+
+<div class="page-header" filter-color="orange">
+    <div class="page-header-image" style="background-image:url(assets/img/Radial-2.jpg)" alt=""></div>
+    <div class="container">
+        <div class="col-md-4 content-center">
+            <div class="card card-login card-plain">
+                <div class="content-center brand">
+                    <img class="n-logo" src="assets/img/now-logo.png" alt="">
+                    <div class="card" *ngFor="let user of usuarios | paginate: config">
+                        <div class="content-center brand">
+                            <div class="col-md-12 mr-auto">
+                                <ul class="nav nav-tabs justify-content-center" role="tablist">
+                                    <li class="nav-item">
+                                        <span style="color: black">{{user.nome}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content text-center">
+                                    <div class="tab-pane active" id="email" role="tabpanel">
+                                        <p id="email" type="text" style="color: black">Email: {{user.email}},</p>
+                                        <div class="content-center">
+                                            <div>
+                                                <span class="fa fa-star mr-2 star" *ngFor="let star of rate"
+                                                    [ngClass]="{'star-checked': star.checked}"></span>
+                                            </div>
+                                            <button class="btn btn-primary btn-round" type="button"
+                                                (click)="deleteUser(user)">Deletar</button>
+                                            <button class="btn btn-primary btn-round" type="button"
+                                                (click)="editUsuario(user)">Editar</button>
+                                            <pagination-controls (pageChange)="pageChange($event)"
+                                                class="my-pagination"></pagination-controls>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-warning btn-round" type="button" (click)="cadastrar()">Cadastrar</button>
+        </div>
+    </div>
+</div>
+</html>

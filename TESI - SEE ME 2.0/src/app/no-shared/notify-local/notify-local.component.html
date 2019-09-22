@@ -1,0 +1,43 @@
+<html lang="pt-br">
+<div class="page-header" filter-color="orange">
+  <div class="page-header-image" style="background-image:url(assets/img/Radial-2.jpg)"></div>
+  <div class="container">
+    <div class="col-md-4 content-center">
+      <div class="card card-login card-plain">
+        <div class="content-center brand">
+          <img class="n-logo" src="assets/img/now-logo.png" alt="">
+          <div class="card" *ngFor="let local of locaisEmail | paginate: config">
+            <div class="content-center brand">
+              <div class="col-md-12 mr-auto">
+                <ul class="nav nav-tabs justify-content-center" role="tablist">
+                  <li class="nav-item">
+                      <h4 style="color:black">Notificar Local?</h4>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content text-center">
+                  <div class="tab-pane active" id="home" role="tabpanel">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <span style="color: black">{{local.nome}}</span>
+                        <p style="color: black">E-mail: {{local.contato.email}}</p>
+                        <p style="color: black">Site: {{local.endereco.website}}</p>
+                        <p style="color: black">Nota: {{local.nota}}</p>
+                      </li>
+
+                    </ul>
+                    <button class="btn btn-primary btn-round" type="button" (click)="enviaEmail()">Enviar e-mail</button>
+                    <pagination-controls (pageChange)="pageChange($event)" class="my-pagination">
+                    </pagination-controls>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</html>

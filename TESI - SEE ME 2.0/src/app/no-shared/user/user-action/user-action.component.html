@@ -1,0 +1,41 @@
+<html lang="pt-br">
+<div class="page-header" filter-color="orange">
+    <div class="page-header-image" style="background-image:url(assets/img/Radial-2.jpg)"></div>
+    <div class="container">
+        <div class="col-md-4 content-center">
+            <form name="userform" method="post" #formCtrl="ngForm">
+                <div class="content">
+                    <div class="input-group form-group-no-border input-lg"
+                        [ngClass]="{'input-group-focus':focus===true}">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="now-ui-icons users_circle-08"></i></span>
+                        </div>
+                        <input name="nome" type="text" class="form-control" placeholder="Nome do usuário..."
+                            (focus)="focus=true" (blur)="focus=false" [(ngModel)]="user.nome" required>
+                    </div>
+                    <div class="input-group form-group-no-border input-lg"
+                        [ngClass]="{'input-group-focus':focus===true}">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="now-ui-icons users_circle-08"></i></span>
+                        </div>
+                        <input name="email" type="text" class="form-control" placeholder="E-mail..."
+                            (focus)="focus=true" (blur)="focus=false" [(ngModel)]="user.email" required>
+                    </div>
+                    <div class="input-group form-group-no-border input-lg"
+                        [ngClass]="{'input-group-focus':focus1===true}">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="now-ui-icons text_caps-small"></i></span>
+                        </div>
+                        <input name="password" type="password" placeholder="Senha..." class="form-control"
+                            (focus)="focus1=true" (blur)="focus1=false" [(ngModel)]="user.password" required />
+                    </div>
+                </div>
+                <div class="footer text-center">
+                    <button type="buton" class="btn btn-primary btn-round btn-lg btn-block" style="margin-bottom: 20px"
+                        (click)="signup()" [disabled]="formCtrl.form.invalid">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</html>

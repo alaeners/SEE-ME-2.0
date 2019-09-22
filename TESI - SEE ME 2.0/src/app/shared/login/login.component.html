@@ -1,0 +1,57 @@
+<html lang="pt-br">
+<div class="page-header" filter-color="orange">
+    <div class="page-header-image" style="background-image:url(assets/img/Radial-2.jpg)"></div>
+    <div class="container">
+        <div class="col-md-4 content-center">
+            <div class="card card-login card-plain">
+                <form name="userform" method="post" #formCtrl="ngForm">
+                    <div class="header header-primary text-center">
+                        <div class="logo-container">
+                            <img src="assets/img/now-logo.png" alt="">
+                        </div>
+                        <!-- Modal -->
+                        <ng-template #content let-modal>
+                            <div class="modal-header col-md-4 content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">acesso restrito</h5>
+                            </div>
+                            <div class="modal-body content-center">
+                                email ou senha inválidos!
+                                <p>Acesso permitido apenas aos administradores do serviço.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary btn-round btn-lg" data-dismiss="modal"
+                                    (click)="closeModal(content)" routerLink="/shared/login">Ok</button>
+                            </div>
+                        </ng-template>
+                    </div>
+                    <div class="content">
+                        <div class="input-group form-group-no-border input-lg"
+                            [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="now-ui-icons users_circle-08"></i></span>
+                            </div>
+                            <input aria-label="email" name="email" type="text" class="form-control"
+                                placeholder="E-mail..." (focus)="focus=true" (blur)="focus=false"
+                                [(ngModel)]="user.email" required>
+                        </div>
+                        <div class="input-group form-group-no-border input-lg"
+                            [ngClass]="{'input-group-focus':focus1===true}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="now-ui-icons text_caps-small"></i></span>
+                            </div>
+                            <input aria-label="senha" name="password" type="password" placeholder="Senha..."
+                                class="form-control" (focus)="focus1=true" (blur)="focus1=false"
+                                [(ngModel)]="user.password" required />
+                        </div>
+                    </div>
+                    <div class="footer text-center">
+                        <button type="buton" class="btn btn-primary btn-round btn-lg btn-block"
+                            style="margin-bottom: 20px" (click)="signInWithEmail(content)"
+                            [disabled]="formCtrl.form.invalid">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

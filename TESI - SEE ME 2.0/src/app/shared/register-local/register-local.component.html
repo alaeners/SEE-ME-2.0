@@ -1,0 +1,178 @@
+<html lang="pt-br">
+<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+<div class="wrapper">
+  <div class="page-header clear-filter" filter-color="orange">
+    <div class="page-header-image rellax-header" data-rellax-speed="-7"
+      style="background-image: url('assets/img/Radial-2.jpg');">
+    </div>
+    <div class="container">
+      <div class="content-center brand">
+        <div class="col-md-12 mr-auto">
+          <div class="card" style="overflow: scroll; max-height: 530px;">
+            <div class="card-body">
+              <form name="formlocal" class="form" method="post" #formCtrl="ngForm">
+                <!-- Modal -->
+                <ng-template #content let-modal>
+                  <div class="modal-header col-md-4 content-center">
+                    <h5 class="modal-title" id="exampleModalLabel">acesso restrito</h5>
+                  </div>
+                  <div class="modal-body content-center">
+                    Ops! Algo deu errado...
+                    <p>Verifique o CEP digitado.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-round btn-lg" data-dismiss="modal"
+                      (click)="closeModal(content)" routerLink="/shared/register-local">Ok</button>
+                  </div>
+                </ng-template>
+                <div>
+                  <h4 style="color:black">Cadastrar Estabelecimento</h4>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons tech_laptop"></i></span>
+                  </div>
+                  <input type="text" aria-label="Website do Estabelecimento" name="website"
+                    [(ngModel)]="local.contato.website" class="form-control" placeholder="Web Site Oficial..." required>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons shopping_shop"></i></span>
+                  </div>
+                  <input type="text" aria-label="Nome do Estabelecimento" [(ngModel)]="local.nome" name="nome"
+                    class="form-control" placeholder="Nome do Local..." required>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons business_badge"></i></span>
+                  </div>
+                  <input type="text" aria-label="CNPJ do Estabelecimento" [(ngModel)]="local.cnpj" class="form-control"
+                    name="cnpj" placeholder="CNPJ..." id="cnpj" [specialCharacters]="[ '-', '.', '/' ]"
+                    mask="00.000.000/0000-00" required>
+                </div>
+                <div class="col-sm-12" style="color: black">
+                  <p class="category" style="color: black">Escolha o tipo de local:</p>
+                  <div class="form-check form-check-radio">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" aria-label="opção shopping" name="shopping"
+                        id="exampleRadios1" value="shopping" checked="" [(ngModel)]="local.tipo">
+                      <span class="form-check-sign"></span>
+                      Shopping Center
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" aria-label="opção bar ou restaurante" name="bar"
+                        id="exampleRadios1" value="bar" checked="" [(ngModel)]="local.tipo">
+                      <span class="form-check-sign"></span>
+                      Bares e Restaurantes
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" aria-label="opção praça ou evento" name="praca"
+                        id="exampleRadios1" value="praca" checked="" [(ngModel)]="local.tipo">
+                      <span class="form-check-sign"></span>
+                      Praças e Eventos
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" aria-label="opção atração musical" name="musical"
+                        id="exampleRadios1" value="musical" checked="" [(ngModel)]="local.tipo">
+                      <span class="form-check-sign"></span>
+                      Eventos Musicais
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" aria-label="opção atração cultural" name="cultural"
+                        id="exampleRadios1" value="cultural" checked="" [(ngModel)]="local.tipo">
+                      <span class="form-check-sign"></span>
+                      Eventos Culturais
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" aria-label="opção outros" name="outros"
+                        id="exampleRadios1" value="outros" checked="" [(ngModel)]="local.tipo">
+                      <span class="form-check-sign"></span>
+                      Outros Estabelecimentos
+                    </label>
+                  </div>
+                </div><br/>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons ui-1_email-85"></i></span>
+                  </div>
+                  <input type="text" [(ngModel)]="local.contato.email" aria-label="email" name="email"
+                    class="form-control" placeholder="Email do Local...">
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons shopping_shop"></i></span>
+                  </div>
+                  <input type="text" [(ngModel)]="local.contato.telefone" aria-label="telefone" name="telefone"
+                    id="telefone" class="form-control" placeholder="Telefone..." mask="(00) 0000-0000" required>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons transportation_bus-front-12"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="CEP..." id="cep" aria-label="cep" name="cep"
+                    [(ngModel)]="cep.cep" [specialCharacters]="[ '-', '.' ]" mask="00.000-000" required>
+                </div>
+                <button class="btn btn-primary btn-round" type="button" (click)="buscaCep()">Buscar</button>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons location_pin"></i></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="rua" name="logradouro" placeholder="Rua..."
+                    id="logradouro" [(ngModel)]="cep.logradouro" required>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons shopping_tag-content"></i></span>
+                  </div>
+                  <input type="text" [(ngModel)]="local.endereco.numero" class="form-control" aria-label="numero"
+                    name="numero" placeholder="Número ou S/A..." id="numero" required>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons objects_planet"></i></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="bairro" aria-label="bairro" name="bairro"
+                    placeholder="Bairro..." id="bairro" [(ngModel)]="cep.bairro" required>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons objects_planet"></i></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="cidade" name="cidade" placeholder="Cidade..."
+                    id="localidade" [(ngModel)]="cep.localidade" required>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons objects_planet"></i></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="estado" name="uf" placeholder="Estado/UF..."
+                    id="uf" [(ngModel)]="cep.uf" required>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="now-ui-icons objects_planet"></i></span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="pais" name="Pais" placeholder="País..." id="pais"
+                    [(ngModel)]="local.endereco.pais" required>
+                </div>
+                <div class="footer text-center">
+                  <button *ngIf="!isStateEdit()" class="btn btn-primary btn-round" type="buton"
+                    (click)="inserirLocal()">Cadastrar</button>
+                  <button *ngIf="isStateEdit()" class="btn btn-success btn-round mr-5" type="button"
+                    (click)="update()">Salvar</button>
+                  <button *ngIf="isStateEdit()" class="btn btn-primary btn-round" type="button"
+                    (click)="cancel()">Cancelar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>

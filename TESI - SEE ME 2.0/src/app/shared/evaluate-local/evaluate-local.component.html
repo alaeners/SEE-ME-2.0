@@ -1,0 +1,25 @@
+<html lang="pt-br">
+<div class="page-header" filter-color="orange">
+    <div class="page-header-image" style="background-image:url(assets/img/Radial-2.jpg)"></div>
+    <div class="container">
+        <div class="col-md-4 content-center">
+            <div class="card card-login card-plain">
+                <div class="content-center brand">
+                    <img class="n-logo" src="assets/img/now-logo.png" alt="">
+                    <h4>Informe o nome do local ou endereço que deseja avaliar e clique em pesquisar!</h4>
+                    <form name="formlocal" class="form" method="post" #formCtrl="ngForm">
+                        <div class="input-group form-group-no-border input-lg"
+                            [ngClass]="{'input-group-focus':focus===true}">
+                            <input name="pesquisa" type="text" class="form-control" 
+                            aria-label="pesquisaPorNome" placeholder="Digite o nome ou endereço local você deseja avaliar ..."
+                                (focus)="focus=true" (blur)="focus=false" [(ngModel)]="nome"  required>
+                        </div>
+                        <button (click)="buscaLocal()" class="btn btn-primary btn-round" type="button">
+                            <i class="icon-search icon-2x "></i> Pesquisar </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
