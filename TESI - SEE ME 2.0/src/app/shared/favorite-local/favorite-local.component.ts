@@ -46,5 +46,4 @@ export class FavoriteLocalComponent implements OnInit, OnDestroy {
         window.localStorage.setItem ("nome", JSON.stringify(this.favoritos));
         alert("Exclusão feita com sucesso!");
     }
-
 }
