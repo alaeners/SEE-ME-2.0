@@ -1,4 +1,5 @@
-# SEE-ME-2.0
+# SEE-ME-2.0: 
+# DEMO: https://seeme-16d83.web.app/index
  
 O objetivo desta atividade é fazer com que vocês experimentem a construção de uma aplicação web progressiva.
 Para isso, o seu grupo deve criar uma PWA que atenda aos seguintes requisitos:
