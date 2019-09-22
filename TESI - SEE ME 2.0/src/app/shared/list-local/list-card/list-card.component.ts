@@ -76,11 +76,15 @@ export class ListCardComponent implements OnInit, OnDestroy {
     if (this.tipo !== 'todos') {
       this.locais = this.db.list('locais', ref => ref.orderByChild('tipo').equalTo(this.tipo)).snapshotChanges().pipe(
         map(items => {
-          return items.map(c => ({key: c.payload.key, ...c.payload.val()}));
+          return items.map(c => ({ key: c.payload.key, ...c.payload.val() }));
         })
       );
     } else if (this.nome !== '') {
-     
+      this.locais = this.db.list('locais', ref => ref.orderByChild('nome').equalTo(this.nome)).snapshotChanges().pipe(
+        map(items => {
+          return items.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+        })
+      );
     }
   }
 
@@ -140,6 +144,14 @@ export class ListCardComponent implements OnInit, OnDestroy {
   }
 
   favoritar(local: Local): void {
-    
+    var locais = new Array();
+
+    locais = JSON.parse(window.localStorage.getItem("nome"));
+    if (locais == undefined){
+      locais = new Array();
+    }
+    locais.push(local.nome);
+    window.localStorage.setItem ("nome", JSON.stringify(locais));
+    alert("Salvo em seus favoritos!");
   }
 }

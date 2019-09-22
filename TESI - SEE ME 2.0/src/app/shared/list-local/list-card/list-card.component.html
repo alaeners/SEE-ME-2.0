@@ -25,20 +25,27 @@
                                         <p style="color: black">Telefone: {{local.contato.telefone}}</p>
                                         <p style="color: black">E-mail: {{local.contato.email}}</p>
                                         <p style="color: black">Site: {{local.contato.website}}</p>
-                                        <p style="color: black">Nota: {{local.nota}} <span *ngIf="!local.nota">Sem avaliação</span></p>
+                                        <p style="color: black">Nota: {{local.nota}} <span *ngIf="!local.nota">Sem
+                                                avaliação</span></p>
                                         <div class="content-center">
                                             <div *ngIf="calculateEvaluation(local)">
                                                 <span class="fa fa-star mr-2 star" *ngFor="let star of rate"
                                                     [ngClass]="{'star-checked': star.checked}"></span>
                                             </div>
-                                            <button class="btn btn-success btn-round" type="button"
-                                                (click)="editLocal(local)" *ngIf="show">Editar</button>
-                                                <button class="btn btn-warning btn-round" type="button"
-                                                (click)="avaliar(local)">Favoritar</button>                                                
-                                            <button class="btn btn-warning btn-round" type="button"
-                                                (click)="favoritar(local)">Avaliar</button>
-                                            <button class="btn btn-primary btn-round" type="button"
-                                                (click)="deleteLocal(local)" *ngIf="show">Deletar</button>
+                                            <button class="btn btn-success btn-round" 
+                                                    type="button"
+                                                    (click)="editLocal(local)" 
+                                                    *ngIf="show">Editar</button>
+                                            <button class="btn btn-warning btn-round" 
+                                                    type="button"
+                                                    (click)="avaliar(local)">Avaliar</button>
+                                            <button class="btn btn-warning btn-round" 
+                                                    type="button"
+                                                    (click)="favoritar(local)">Favoritar</button>
+                                            <button class="btn btn-primary btn-round" 
+                                                    type="button"
+                                                    (click)="deleteLocal(local)" 
+                                                    *ngIf="show">Deletar</button>
                                             <pagination-controls role="list" (pageChange)="pageChange($event)"
                                                 class="my-pagination"></pagination-controls>
                                         </div>
@@ -52,4 +59,5 @@
         </div>
     </div>
 </div>
+
 </html>
