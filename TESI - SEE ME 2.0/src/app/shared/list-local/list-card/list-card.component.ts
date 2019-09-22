@@ -146,10 +146,14 @@ export class ListCardComponent implements OnInit, OnDestroy {
 
   favoritar(local: Local): void {
     var locais = new Array();
-
     locais = JSON.parse(window.localStorage.getItem("nome"));
-    if (locais == undefined){
+    if (locais == undefined) {
       locais = new Array();
+    } 
+    for (var i = 0; i < locais.length; i++) {
+        if (locais[i] == local.nome) {
+          return alert("Local já favoritado!");
+        }
     }
     locais.push(local.nome);
     window.localStorage.setItem ("nome", JSON.stringify(locais));

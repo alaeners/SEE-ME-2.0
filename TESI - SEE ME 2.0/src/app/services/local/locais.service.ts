@@ -1,11 +1,13 @@
-import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
 import { AngularFireDatabase} from 'angularfire2/database';
-import { Observable } from 'rxjs';
-import { Local } from '../../models/Local'
-import { Question } from 'app/models/Question';
-import 'rxjs/add/operator/map';
 import { Evaluation } from 'app/models/Evaluation';
+import { Injectable } from '@angular/core';
+import { Local } from '../../models/Local';
+import { Observable } from 'rxjs';
+import { Question } from 'app/models/Question';
+import { Router } from '@angular/router';
+
+import 'rxjs/add/operator/map';
 import * as firebase from 'firebase';
 
 @Injectable({
@@ -15,7 +17,7 @@ export class LocaisService {
 
   LocaisCollection: AngularFirestoreCollection<Local>;
   Locais: Observable<Local[]>
-  constructor(private afs: AngularFirestore, private db: AngularFireDatabase) {
+  constructor(private afs: AngularFirestore, private db: AngularFireDatabase, private router: Router) {
     this.Locais = this.afs.collection('locais').snapshotChanges().map(
       changes => {
         return changes.map(
@@ -87,9 +89,9 @@ export class LocaisService {
   }
 
   private createEvaluation(id: string, evaluation: Evaluation){
-    return  firebase.database().ref().child('locais').child().push(this.local)
+    return  firebase.database().ref().child('locais').push(this.local)
     .then(() => {
-      console.log("Qual é a nota:"+ this.local.nota);
+      console.log("Qual é a nota:"+ this.local);
       this.router.navigate(['index']);
     })
     .catch(() => {
@@ -97,6 +99,9 @@ export class LocaisService {
       this.router.navigate(['index']);
     });
     }
+  local(local: any) {
+    throw new Error("Method not implemented.");
+  }
 
   private calculateEvaluation(evaluationQuestions: Array<Question>): Evaluation {
     let evaluationNote = { note: 0 } as Evaluation;
@@ -115,19 +120,5 @@ export class LocaisService {
     });
 
     return evaluationNote;
-  }
-
-/*  GetAll(){
-    return this.db.list('locais')
-    .snapshotChanges()
-    .pipe(
-      map(changes => {
-        return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
-      })
-    );
-  }*/
-
-  
+  } 
 }
-
-
