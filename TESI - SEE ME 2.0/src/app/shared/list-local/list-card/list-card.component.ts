@@ -140,7 +140,6 @@ export class ListCardComponent implements OnInit, OnDestroy {
   }
 
   avaliar(local: Local): void {
-    console.log("passou aqui");
     this.router.navigate(['shared/evaluate-screen', local.nome]);
   }
 
