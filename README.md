@@ -5,13 +5,13 @@ O objetivo desta atividade é fazer com que vocês experimentem a construção d
 Para isso, o seu grupo deve criar uma PWA que atenda aos seguintes requisitos:
 
 - [x] Conter pelo menos duas páginas HTML, formatadas adequadamente para smartphones por meio da CSS;
-- [ ] Usar armazenamento local de dados, por meio da API Web Storage ou da API IndexedDB, considerando:
+- [x] Usar armazenamento local de dados, por meio da API Web Storage ou da API IndexedDB, considerando:
 - [ ] a. Os dados armazenados devem ser específicos do usuário (determinados automaticamente ou informados por meio de um formulário);
 - [ ] b. Os dados armazenados devem ser usados em alguma funcionalidade da aplicação (mesmo que apenas a apresentação em alguma página);
 - [x] A aplicação deve possuir um manifesto que permita a instalação na tela inicial dos dispositivos dos usuários;
 - [x] A aplicação deve possuir um service worker que:
-- [ ] a. Implemente corretamente a instalação e a ativação da aplicação;
-- [ ] b Permita o funcionamento offline da aplicação.
+- [x] a. Implemente corretamente a instalação e a ativação da aplicação;
+- [x] b Permita o funcionamento offline da aplicação.
 
 ### Observações importantes:
 
