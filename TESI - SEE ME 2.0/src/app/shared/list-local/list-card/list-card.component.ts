@@ -12,7 +12,6 @@ import { isNullOrUndefined } from 'util';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { map } from 'rxjs/operators';
-import undefined = require('firebase/empty-import');
 
 @Component({
   selector: 'app-list-card',
