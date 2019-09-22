@@ -26,6 +26,7 @@ export class RegisterLocalComponent implements OnInit, OnDestroy {
   cep = new Cep();
   local = {
     nota: 0.0,
+    avaliacao: 0.0,
     endereco: {} as Endereco,
     contato: {} as Contato
   } as Local;
@@ -71,16 +72,16 @@ export class RegisterLocalComponent implements OnInit, OnDestroy {
     this.local.endereco.localidade = this.cep.localidade.toLowerCase();
     this.local.endereco.logradouro = this.cep.logradouro.toLowerCase();
     this.local.nota = 0.0;
+    this.local.avaliacao = 0.0;
 
     return firebase.database().ref().child('locais').push(this.local)
       .then(() => {
-        console.log("Qual é a nota:"+ this.local.nota);
         this.router.navigate(['index']);
       })
       .catch(() => {
         alert('Erro ao inserir o local.');
         this.router.navigate(['index']);
-      });;
+      });
   }
 
   isStateEdit(): boolean {

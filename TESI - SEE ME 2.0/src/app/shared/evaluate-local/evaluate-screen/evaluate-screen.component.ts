@@ -96,7 +96,7 @@ export class EvaluateScreenComponent implements OnInit {
       } as Question,
       {
         id: 'menu_braile',
-        desc: 'Os cocumentos, menus possuem braile para pessoas cegas?',
+        desc: 'Os documentos, menus possuem braile para pessoas cegas?',
         option: [
           {
             id: 'radioSimPergunta5',
@@ -138,13 +138,20 @@ export class EvaluateScreenComponent implements OnInit {
   }
 
   saveEvaluation(): void {
+    console.log("chamou a salve");
+      
+
+
+
     this.locaisservice.saveEvaluation(this.local, this.evaluationQuestions)
       .then((data) => {
+        console.log("passou aqui c/ sucesso");
         alert('Avaliação cadastrada');
         this.router.navigate(['shared/list-local']);
 
       })
       .catch((err) => {
+        console.log("passou aqui c/ sucesso porém com erro");
         alert('Ocorreu um erro ao cadastrar a avaliação' + err);
       });
   }
