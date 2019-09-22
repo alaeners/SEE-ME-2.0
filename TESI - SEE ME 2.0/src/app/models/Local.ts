@@ -9,4 +9,5 @@ export class Local {
   contato: Contato;
   tipo: string;
   nota: number;
+  avaliacao: number;
 }

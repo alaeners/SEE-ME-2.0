@@ -68,18 +68,35 @@ export class LocaisService {
   }
 
   saveEvaluation(local: Local, evaluationQuestions: Array<Question>): Promise<void> {
+    
+    
+  
+    local.avaliacao++;
     let evaluationNote = this.calculateEvaluation(evaluationQuestions);
     return this.createEvaluation(local.nome, evaluationNote)
       .then(() => {
         local.nota = evaluationNote.note;
+        if (local.avaliacao > 0.0){
+          local.nota = ((local.nota + evaluationNote.note) / local.avaliacao);
+      } else { 
+        local.nota = evaluationNote.note;
+      }
         return this.updateLocal(local);
       })
       .catch();
   }
 
   private createEvaluation(id: string, evaluation: Evaluation){
-    return this.afs.collection('locais').doc(id).collection('avaliacoes').add(evaluation);
-  }
+    return  firebase.database().ref().child('locais').child().push(this.local)
+    .then(() => {
+      console.log("Qual é a nota:"+ this.local.nota);
+      this.router.navigate(['index']);
+    })
+    .catch(() => {
+      alert('Erro ao inserir o local.');
+      this.router.navigate(['index']);
+    });
+    }
 
   private calculateEvaluation(evaluationQuestions: Array<Question>): Evaluation {
     let evaluationNote = { note: 0 } as Evaluation;

@@ -140,7 +140,8 @@ export class ListCardComponent implements OnInit, OnDestroy {
   }
 
   avaliar(local: Local): void {
-    this.router.navigate(['shared/evaluate-screen', local.id]);
+    console.log("passou aqui");
+    this.router.navigate(['shared/evaluate-screen', local.nome]);
   }
 
   favoritar(local: Local): void {
