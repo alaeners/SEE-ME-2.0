@@ -34,9 +34,9 @@ Para isso, o seu grupo deve criar uma PWA que atenda aos seguintes requisitos:
 - [ ] Não Implementado
 
 ###### 3. Armazenamento local: A aplicação armazena localmente dados específicos do usuário e os utiliza (ou apresenta) em alguma funcionalidade.
-- [ ] Implementado 
+- [x] Implementado 
 - [ ] Parcialmente Implementado 
-- [x] Não Implementado
+- [ ] Não Implementado
 
 ###### 4. Manifesto: A aplicação possui um manifesto que descreve de forma completa e suficiente como essa aplicação deve ser instalada na tela inicial dos smartphones (considerando as diferentes plataformas móveis).
 - [x] Implementado 
