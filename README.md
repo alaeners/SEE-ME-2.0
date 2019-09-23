@@ -1,4 +1,4 @@
-# DOCUMENTAÇÃO > SEE-ME-2.0: 
+# DOCUMENTAÇÃO SEE-ME-2.0: 
 # DEMO: https://seeme-16d83.web.app/index
  
 O objetivo desta atividade é fazer com que vocês experimentem a construção de uma aplicação web progressiva.
