@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CepService } from '../../services/cep/cep.service';
 import { Cep } from '../../models/cep';
 import { Router } from '@angular/router';

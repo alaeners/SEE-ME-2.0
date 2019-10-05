@@ -1,4 +1,5 @@
-import { Component, OnInit, Renderer, OnDestroy, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, Injectable } from '@angular/core';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
     selector: 'app-components',
@@ -9,7 +10,7 @@ import { Component, OnInit, Renderer, OnDestroy, HostListener } from '@angular/c
     }
     `]
 })
-
+@Injectable()
 export class ComponentsComponent implements OnInit, OnDestroy {
     data: Date = new Date();
     page = 4;
@@ -22,14 +23,11 @@ export class ComponentsComponent implements OnInit, OnDestroy {
     showButton = false;
 
     state_icon_primary = true;
-    constructor() { }
+
 
     @HostListener('window:beforeinstallprompt', ['$event'])
     onbeforeinstallprompt(e) {
         console.log(e);
-        // Prevent Chrome 67 and earlier from automatically showing the prompt
-        e.preventDefault();
-        // Stash the event so it can be triggered later.
         this.deferredPrompt = e;
         this.showButton = true;
     }
