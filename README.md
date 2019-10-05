@@ -57,9 +57,15 @@ Para isso, o seu grupo deve criar uma PWA que atenda aos seguintes requisitos:
 FavoritosComLocalStorage.gif)
 
 ###### 2. Originalidade/criatividade: A aplicação é original (não é copiada da Internet ou de outro grupo) e oferece alguma funcionalidade relevante.
-- [x] Implementado 
-- [ ] Parcialmente Implementado 
-- [ ] Não Implementado
+- [x] Implementado - [ ] Parcialmente Implementado - [ ] Não Implementado
+##### Descrição da aplicação:
+Este trabalho tem como objetivo oferecer uma solução tecnológica para pessoas com deficiências visuais possam avaliar os locais ou estabelecimentos que visitaram, incluindo tanto pontos positivos e negativos, como por exemplo se foram bem atendidos, se possui
+um local com as devidas infraestruturas para atende-los melhor. Ao indicar a um local ou estabelecimento na aplicação a informação ficará disponível para que outros possam avaliar aquele local ou estabelecimento também. As empresas e orgão envolvidos poderão
+usar esses dados como forma de melhoria no atendimento ao cliente, sem distinção. Para o desenvolvimento desse projeto foi definido que deveria atender o máximo de pessoas e por isso o aplicativo foi desenvolvido com ferramentas que permitiam o seu uso em diversas
+plataformas(computadores, smartphones, tablets) e tecnologia de atualização de dados em tempo real. Para atingir esses objetivos utilizou-se a tecnologia Firebase Cloud para realizar hospedagem da aplicação. Para a inserção e atualização de dados em tempo real
+e para a camada de visualização do aplicativo foram utilizadas as tecnologias Bootstrap 4, Angular 6 e NodeJs que permitem a criação de web sites leves e responsivos para a utilização em diversas plataformas. O modelo de arquitetura do aplicativo se baseia em
+Progressive Web Apps permitindo ao usuário utilizar o aplicativo como se fosse nativo da plataforma, sem ocupar muito espaço e não exigindo uma configuração de hardware de alta performance para utiliza-lo. Como o intuito do aplicativo é voltado para pessoas
+que possuem cegueira ou baixa visão aplicou-se também os conceitos de aplicações com acessibilidade, permitindo ao usuário ter a melhor experiência possível na utilização do aplicativo.
 
 ###### 3. Armazenamento local: A aplicação armazena localmente dados específicos do usuário e os utiliza (ou apresenta) em alguma funcionalidade.
 - [x] Implementado 
