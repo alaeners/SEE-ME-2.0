@@ -96,6 +96,8 @@ https://youtu.be/BWbamcUyv7I
 
 *A funcionalidade com funcionamento offiline consiste em: Posso visualizar meu locais favoritos, que foram salvos/favoritados previamente, quando eu estiver sem conexão com a internet(3G/4G/5G,wifi e afins).*
 
+*Video de Teste:* https://youtu.be/fH6ljrtPk9M
+
 ### 7. Documentação: Há um documento que descreve as funcionalidades da aplicação e que explica como cada requisito da aplicação (previsto no enunciado da tarefa) foi implementado.
 - [x] Implementado - [ ] Parcialmente Implementado - [ ] Não Implementado
 
