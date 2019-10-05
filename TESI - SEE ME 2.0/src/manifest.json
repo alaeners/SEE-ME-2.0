@@ -1,12 +1,11 @@
 {
   "name": "see-me",
   "short_name": "see-me",
-  "theme_color": "rgba(224,23,3,.6)",
+  "theme_color": "#1976d2",
   "background_color": "#fafafa",
-  "display": "fullscreen",
+  "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "description":"Uma aplicação simples e com objetivo social",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
@@ -48,8 +47,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ], 
-  "related_applications": [{
-    "platform": "web"
-  }]
+  ]
 }
