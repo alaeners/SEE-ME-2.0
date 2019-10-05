@@ -42,9 +42,9 @@ export class ComponentsComponent implements OnInit, OnDestroy {
         this.deferredPrompt.userChoice
             .then((choiceResult) => {
                 if (choiceResult.outcome === 'accepted') {
-                    console.log('User accepted the A2HS prompt');
+                    console.log('Usuário aceitou instalar');
                 } else {
-                    console.log('User dismissed the A2HS prompt');
+                    console.log('Usuário não aceitou instalar');
                 }
                 this.deferredPrompt = null;
             });
