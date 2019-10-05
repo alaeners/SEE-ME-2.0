@@ -53,41 +53,52 @@ Para isso, o seu grupo deve criar uma PWA que atenda aos seguintes requisitos:
 #### Favoritar um estabelecimento usando LocalStorage: 
 1. Home > Listar > Clicar em Favoritar > Voltar para a Home > Clicar em Favoritos
 
-![](
-FavoritosComLocalStorage.gif)
+![](FavoritosComLocalStorage.gif)
 
 ### 2. Originalidade/criatividade: A aplicação é original (não é copiada da Internet ou de outro grupo) e oferece alguma funcionalidade relevante.
 - [x] Implementado - [ ] Parcialmente Implementado - [ ] Não Implementado
-##### Descrição da aplicação:
-Este trabalho tem como objetivo oferecer uma solução tecnológica para pessoas com deficiências visuais possam avaliar os locais ou estabelecimentos que visitaram, incluindo tanto pontos positivos e negativos, como por exemplo se foram bem atendidos, se possui
-um local com as devidas infraestruturas para atende-los melhor. Ao indicar a um local ou estabelecimento na aplicação a informação ficará disponível para que outros possam avaliar aquele local ou estabelecimento também. As empresas e orgão envolvidos poderão
-usar esses dados como forma de melhoria no atendimento ao cliente, sem distinção. Para o desenvolvimento desse projeto foi definido que deveria atender o máximo de pessoas e por isso o aplicativo foi desenvolvido com ferramentas que permitiam o seu uso em diversas
-plataformas(computadores, smartphones, tablets) e tecnologia de atualização de dados em tempo real. Para atingir esses objetivos utilizou-se a tecnologia Firebase Cloud para realizar hospedagem da aplicação. Para a inserção e atualização de dados em tempo real
-e para a camada de visualização do aplicativo foram utilizadas as tecnologias Bootstrap 4, Angular 6 e NodeJs que permitem a criação de web sites leves e responsivos para a utilização em diversas plataformas. O modelo de arquitetura do aplicativo se baseia em
+##### Descrição da aplicação: 
+
+Este trabalho tem como objetivo oferecer uma solução tecnológica para pessoas com deficiências visuais possam avaliar os locais ou estabelecimentos que visitaram, incluindo tanto pontos positivos e negativos, como por exemplo se foram bem atendidos, se possui um local com as devidas infraestruturas para atende-los melhor. Ao indicar a um local ou estabelecimento na aplicação a informação ficará disponível para que outros possam avaliar aquele local ou estabelecimento também. As empresas e orgão envolvidos poderão usar esses dados como forma de melhoria no atendimento ao cliente, sem distinção. Para o desenvolvimento desse projeto foi definido que deveria atender o máximo de pessoas e por isso o aplicativo foi desenvolvido com ferramentas que permitiam o seu uso em diversas plataformas(computadores, smartphones, tablets) e tecnologia de atualização de dados em tempo real. Para atingir esses objetivos utilizou-se a tecnologia Firebase Cloud para realizar hospedagem da aplicação. Para a inserção e atualização de dados em tempo real e para a camada de visualização do aplicativo foram utilizadas as tecnologias Bootstrap 4, Angular 6 e NodeJs que permitem a criação de web sites leves e responsivos para a utilização em diversas plataformas. O modelo de arquitetura do aplicativo se baseia em
 Progressive Web Apps permitindo ao usuário utilizar o aplicativo como se fosse nativo da plataforma, sem ocupar muito espaço e não exigindo uma configuração de hardware de alta performance para utiliza-lo. Como o intuito do aplicativo é voltado para pessoas
 que possuem cegueira ou baixa visão aplicou-se também os conceitos de aplicações com acessibilidade, permitindo ao usuário ter a melhor experiência possível na utilização do aplicativo.
 
 ### 3. Armazenamento local: A aplicação armazena localmente dados específicos do usuário e os utiliza (ou apresenta) em alguma funcionalidade.
-- [x] Implementado 
-- [ ] Parcialmente Implementado 
-- [ ] Não Implementado
+- [x] Implementado - [ ] Parcialmente Implementado - [ ] Não Implementado
+
+*Caso queira testar, abra o console(F12) do navegado e execute essa função:*
+
+```javaScript
+if (window.localStorage){ 
+   console.log("Armazenamento local configurado")
+} else{ 
+   console.log("Armazenamento local NÃO configurado")}
+```
+
+![](FavoritosComLocalStorage.gif)
 
 ### 4. Manifesto: A aplicação possui um manifesto que descreve de forma completa e suficiente como essa aplicação deve ser instalada na tela inicial dos smartphones (considerando as diferentes plataformas móveis).
-- [x] Implementado 
-- [ ] Parcialmente Implementado 
-- [ ] Não Implementado
+- [x] Implementado - [ ] Parcialmente Implementado - [ ] Não Implementado
+
+*Segbue link do arquivo manifest.json:* 
+https://github.com/alaeners/SEE-ME-2.0/blob/master/TESI%20-%20SEE%20ME%202.0/src/manifest.json
+
+*Segue link do teste realizado onde o aplicativo é instalado e executado. Apresentando a função de adicionar a tela principal:* 
+https://youtu.be/BWbamcUyv7I
 
 ### 5. Service Worker: A aplicação possui um service worker que possui métodos corretamente implementados para a sua instalação e ativação.
-- [x] Implementado 
-- [ ] Parcialmente Implementado 
-- [ ] Não Implementado
+- [x] Implementado - [ ] Parcialmente Implementado - [ ] Não Implementado
+
+*Segue link do arquivo:* https://github.com/alaeners/SEE-ME-2.0/blob/master/TESI%20-%20SEE%20ME%202.0/src/ngsw-config.json
 
 ### 6. Funcionamento offline: A aplicação funciona localmente, sem conexão à Internet, mesmo que com funcionalidade limitada (considerando o que for pertinente).
-- [x] Implementado 
-- [ ] Parcialmente Implementado 
-- [ ] Não Implementado
+- [x] Implementado - [ ] Parcialmente Implementado - [ ] Não Implementado
+
+*A funcionalidade com funcionamento offiline consiste em: Posso visualizar meu locais favoritos, que foram salvos/favoritados previamente, quando eu estiver sem conexão com a internet(3G/4G/5G,wifi e afins).*
 
 ### 7. Documentação: Há um documento que descreve as funcionalidades da aplicação e que explica como cada requisito da aplicação (previsto no enunciado da tarefa) foi implementado.
-- [ ] Implementado 
-- [x] Parcialmente Implementado 
-- [ ] Não Implementado
+- [x] Implementado - [ ] Parcialmente Implementado - [ ] Não Implementado
+
+*O documento README.md deste repositório é parte da documentação desta atividade*
+*As demais partes da documentação se encontram em:* 
+https://github.com/alaeners/SEE-ME-2.0/blob/master/AlaeneRufinoDeSousa.pdf
