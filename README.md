@@ -56,7 +56,7 @@ Para isso, o seu grupo deve criar uma PWA que atenda aos seguintes requisitos:
 ![](
 FavoritosComLocalStorage.gif)
 
-###### 2. Originalidade/criatividade: A aplicação é original (não é copiada da Internet ou de outro grupo) e oferece alguma funcionalidade relevante.
+### 2. Originalidade/criatividade: A aplicação é original (não é copiada da Internet ou de outro grupo) e oferece alguma funcionalidade relevante.
 - [x] Implementado - [ ] Parcialmente Implementado - [ ] Não Implementado
 ##### Descrição da aplicação:
 Este trabalho tem como objetivo oferecer uma solução tecnológica para pessoas com deficiências visuais possam avaliar os locais ou estabelecimentos que visitaram, incluindo tanto pontos positivos e negativos, como por exemplo se foram bem atendidos, se possui
@@ -67,27 +67,27 @@ e para a camada de visualização do aplicativo foram utilizadas as tecnologias 
 Progressive Web Apps permitindo ao usuário utilizar o aplicativo como se fosse nativo da plataforma, sem ocupar muito espaço e não exigindo uma configuração de hardware de alta performance para utiliza-lo. Como o intuito do aplicativo é voltado para pessoas
 que possuem cegueira ou baixa visão aplicou-se também os conceitos de aplicações com acessibilidade, permitindo ao usuário ter a melhor experiência possível na utilização do aplicativo.
 
-###### 3. Armazenamento local: A aplicação armazena localmente dados específicos do usuário e os utiliza (ou apresenta) em alguma funcionalidade.
+### 3. Armazenamento local: A aplicação armazena localmente dados específicos do usuário e os utiliza (ou apresenta) em alguma funcionalidade.
 - [x] Implementado 
 - [ ] Parcialmente Implementado 
 - [ ] Não Implementado
 
-###### 4. Manifesto: A aplicação possui um manifesto que descreve de forma completa e suficiente como essa aplicação deve ser instalada na tela inicial dos smartphones (considerando as diferentes plataformas móveis).
+### 4. Manifesto: A aplicação possui um manifesto que descreve de forma completa e suficiente como essa aplicação deve ser instalada na tela inicial dos smartphones (considerando as diferentes plataformas móveis).
 - [x] Implementado 
 - [ ] Parcialmente Implementado 
 - [ ] Não Implementado
 
-###### 5. Service Worker: A aplicação possui um service worker que possui métodos corretamente implementados para a sua instalação e ativação.
+### 5. Service Worker: A aplicação possui um service worker que possui métodos corretamente implementados para a sua instalação e ativação.
 - [x] Implementado 
 - [ ] Parcialmente Implementado 
 - [ ] Não Implementado
 
-###### 6. Funcionamento offline: A aplicação funciona localmente, sem conexão à Internet, mesmo que com funcionalidade limitada (considerando o que for pertinente).
+### 6. Funcionamento offline: A aplicação funciona localmente, sem conexão à Internet, mesmo que com funcionalidade limitada (considerando o que for pertinente).
 - [x] Implementado 
 - [ ] Parcialmente Implementado 
 - [ ] Não Implementado
 
-###### 7. Documentação: Há um documento que descreve as funcionalidades da aplicação e que explica como cada requisito da aplicação (previsto no enunciado da tarefa) foi implementado.
+### 7. Documentação: Há um documento que descreve as funcionalidades da aplicação e que explica como cada requisito da aplicação (previsto no enunciado da tarefa) foi implementado.
 - [ ] Implementado 
 - [x] Parcialmente Implementado 
 - [ ] Não Implementado
