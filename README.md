@@ -30,28 +30,44 @@ Para isso, o seu grupo deve criar uma PWA que atenda aos seguintes requisitos:
 
 #### Telas Básicas: 
 1. Home > Menu Lateral 
+
+**DESCRIÇÃO DA FUNCIONALIDADE:** Navbar para auxiliar na navegação em modo móvel, afim de não poluir o layout com muitas informações e ficar mais próximo de um aplicativo nativo.
+
 2. Home > Menu Lateral > Login 
+
+**DESCRIÇÃO DA FUNCIONALIDADE:** Área de login para administradores da aplicação, que não será entregue nesta etapa do trabalho
+
 3. Home > Menu Lateral > About
+
+**DESCRIÇÃO DA FUNCIONALIDADE:** Área de informação sobre a aplicação e seus updates.
 
 ![](TelasBasicas.gif)
 
 #### Listar por tipo de estabelecimento: 
 1. Home > Escolher Tipo > Listas por tipo
 
+**DESCRIÇÃO DA FUNCIONALIDADE:** Para todos os estabelecimentos cadastrados existe um tipo a ser escolhido, você pode ver a lista de estabelecimentos, favoritar localmente em seu smartfone. 
+
 ![](ListarTipo.gif)
 
 #### Busca por nome ou endereço de estabelecimento: 
 1. Home > Informar nome ou parte de endereço > Listas de dados localizados (OBSERVAÇÃO: Essa funcionalidade está em desenvolvimento)
+
+**DESCRIÇÃO DA FUNCIONALIDADE:** Tela onde será implementado a função de busca por nome ou endereço. 
 
 ![](BuscaPorNomeOuEndereco.gif)
 
 #### Cadastrar um estabelecimento: 
 1. Home > Cadastrar > Preencher informações > Clicar em cadastrar (OBSERVAÇÃO: CEP usa uma API(viacep) para facilitar o cadastramento das informações)
 
+**DESCRIÇÃO DA FUNCIONALIDADE:** Área de cadastramento de novos estabelecimentos, utilizando API do VIACEP para facilitar o cadastro dos locais e quando cadastrado com sucesso, retornando a área principal de usuários comuns.
+
 ![](Cadastro.gif)
 
 #### Favoritar um estabelecimento usando LocalStorage: 
 1. Home > Listar > Clicar em Favoritar > Voltar para a Home > Clicar em Favoritos
+
+**DESCRIÇÃO DA FUNCIONALIDADE:** Em todos os modos de apresentações (administradores ou não) de listas de estabelecimentos haverá uma opção para favoritar um estabelecimento. Pois, mesmo que esteja sem acesso as redes de comunicações, será capaz de verificar a lista de locais que você salvou, porém ainda não permite que sejam carregados os dados de endereço ao clicar em "ver mais" quando está fora de rede.
 
 ![](FavoritosComLocalStorage.gif)
 
