@@ -1,0 +1,4 @@
+#Sat Nov 09 16:52:24 BRT 2019
+base.0=C\:\\SEE ME 3.0 Cordova\\TESI - SEE ME 3.0\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
