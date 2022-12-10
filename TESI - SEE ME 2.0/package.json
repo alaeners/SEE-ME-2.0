@@ -60,7 +60,7 @@
     "@types/jasmine": "3.3.9",
     "@types/node": "11.11.3",
     "codelyzer": "5.0.0-beta.0",
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "jasmine-core": "3.3.0",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "4.0.1",
